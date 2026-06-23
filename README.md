@@ -12,6 +12,7 @@ legal-notice.html   Impressum + Datenschutzerklärung (Legal Notice + Privacy)
 assets/
   k-logo.svg        Brand logo (the "K" mark)
   favicon.svg       Favicon / apple-touch-icon
+  og-image.png      Social share card (1200×630); og-image.svg is the source
   fonts.css         @font-face for the self-hosted fonts
   fonts/            Inter + JetBrains Mono (woff2, self-hosted, OFL)
   flags/de.svg      Language switch — German
@@ -68,10 +69,13 @@ This repo is ready for Cloudflare Pages with **no build step**:
 
 ## Notes / TODO before going fully live
 
-- **Contact form** is ready for [Web3Forms](https://web3forms.com): paste your free
-  access key into `WEB3FORMS_KEY` in `index.html` to receive submissions by email.
-  Until then — and as a permanent fallback — the form opens a pre-filled email to
-  the contact address. Other options: a Cloudflare Pages Function, Formspree, etc.
+- **Contact form** is wired to [FormSubmit](https://formsubmit.co) — **no account
+  needed**. On the **first** submission, FormSubmit emails `hi@kossov.it` a one-time
+  activation link; click it once and all later submissions arrive in that inbox.
+  The address is assembled at runtime (never in the page source), and if the request
+  fails the form falls back to a pre-filled email. Note: FormSubmit is a third-party
+  processor outside the EU (no DPA) — for a fully GDPR-clean setup, switch to a
+  Cloudflare Pages Function + an EU mailer (Brevo/Mailjet) later.
 - **Email obfuscation:** the address is never written in the HTML/JS source. It is
   assembled at runtime from `data-` attributes (no `mailto:` or `x@y` for
   harvesters), with a `hi(at)kossov.it` fallback if JS is off. Contact: `hi [at]
@@ -81,9 +85,8 @@ This repo is ready for Cloudflare Pages with **no build step**:
 - **Privacy:** `legal-notice.html` contains both the Impressum and a
   Datenschutzerklärung (anchor `#datenschutz`). Have both reviewed by a lawyer and
   conclude a data-processing agreement (AVV) with Cloudflare before going live.
-- **Social preview:** no Open Graph image is set yet (link previews are
-  text-only). To add one, place a 1200×630 PNG in `assets/` and add
-  `og:image` / `twitter:image` tags — ideally built from the real logo and
-  Inter in a design tool, exported to PNG.
+- **Social preview:** `assets/og-image.png` (1200×630, built from the real logo +
+  Inter) is referenced by the Open Graph / Twitter tags. To change it, edit
+  `assets/og-image.svg` and re-export the PNG at 1200×630.
 - **Model names / claims** (e.g. "GPT-5.5", "99.95% uptime", certification
   statuses) are marketing copy — keep them accurate and verifiable.

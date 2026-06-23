@@ -14,9 +14,14 @@
 <meta property="og:title" content="KOSSOV.IT — Souveräne KI-Infrastruktur, gehostet in Europa">
 <meta property="og:description" content="Große Sprachmodelle vollständig unter europäischer Jurisdiktion — offene Modelle auf Ihrer Infrastruktur oder gemanagte proprietäre Modelle in EU-Regionen. Keine Daten verlassen die von Ihnen definierte Grenze.">
 <meta property="og:url" content="https://kossov.it/">
+<meta property="og:image" content="https://kossov.it/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
 <meta property="og:locale" content="de_DE">
 <meta property="og:locale:alternate" content="en_US">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kossov.it/assets/og-image.png">
 <link rel="stylesheet" href="assets/fonts.css">
 <style>
   *,*::before,*::after{box-sizing:border-box;}
@@ -522,7 +527,7 @@
       </div>
       <div style="background:#0c1116;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:30px;box-shadow:0 30px 70px rgba(0,0,0,.35);">
         <form id="contact-form" onsubmit="submitForm(event)">
-          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none!important;">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none!important;">
           <div class="form-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
             <div><label data-i18n="form.name" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3ad;display:block;margin-bottom:7px;">Name</label><input type="text" placeholder="Erika Mustermann" name="name" data-i18n-ph="form.name.ph" class="form-input" required style="width:100%;background:#11171d;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:11px 13px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;"></div>
             <div><label data-i18n="form.company" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3ad;display:block;margin-bottom:7px;">Unternehmen</label><input type="text" placeholder="Acme GmbH" name="company" class="form-input" style="width:100%;background:#11171d;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:11px 13px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;"></div>
@@ -616,9 +621,10 @@
     }
   }
 
-  // Contact form — posts to Web3Forms when a key is set, otherwise opens a
-  // pre-filled email to the contact address. Either way the success notice is shown.
-  var WEB3FORMS_KEY = ""; // paste your free Web3Forms access key to receive submissions by email
+  // Contact form — submissions are emailed via FormSubmit (no account needed).
+  // The address is assembled at runtime so it never appears in the page source.
+  // If the request fails, we fall back to a pre-filled email.
+  function contactAddr(){ return 'hi' + String.fromCharCode(64) + 'kossov.it'; }
   function contactShowSuccess(){
     document.getElementById('contact-form').style.display = 'none';
     document.getElementById('form-success').classList.add('visible');
@@ -627,25 +633,22 @@
     function v(n){ var el = form.querySelector('[name="' + n + '"]'); return el ? el.value : ''; }
     var body = 'Name: ' + v('name') + '\nUnternehmen: ' + v('company') + '\nE-Mail: ' + v('email')
              + '\nDeployment: ' + v('deployment') + '\n\n' + v('message');
-    var addr = 'hi' + String.fromCharCode(64) + 'kossov.it';
-    window.location.href = 'mailto:' + addr + '?subject=' + encodeURIComponent('KOSSOV.IT — Deployment')
-             + '&body=' + encodeURIComponent(body);
+    window.location.href = 'mailto:' + contactAddr() + '?subject='
+             + encodeURIComponent('KOSSOV.IT — Deployment') + '&body=' + encodeURIComponent(body);
   }
   function submitForm(e){
     e.preventDefault();
     var form = document.getElementById('contact-form');
-    if(WEB3FORMS_KEY){
-      var data = new FormData(form);
-      data.append('access_key', WEB3FORMS_KEY);
-      data.append('subject', 'KOSSOV.IT — new deployment request');
-      fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
-        .then(function(r){ return r.json(); })
-        .then(function(j){ j.success ? contactShowSuccess() : contactMailto(form); })
-        .catch(function(){ contactMailto(form); });
-    } else {
-      contactMailto(form);
-      contactShowSuccess();
-    }
+    var data = new FormData(form);
+    data.append('_subject', 'KOSSOV.IT — new deployment request');
+    data.append('_template', 'table');
+    data.append('_captcha', 'false');
+    fetch('https://formsubmit.co/ajax/' + contactAddr(), {
+      method: 'POST', headers: { 'Accept': 'application/json' }, body: data
+    })
+      .then(function(r){ return r.json(); })
+      .then(function(j){ (j && (j.success === true || j.success === 'true')) ? contactShowSuccess() : contactMailto(form); })
+      .catch(function(){ contactMailto(form); });
   }
 
   /* ============================================================
