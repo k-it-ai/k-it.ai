@@ -1,0 +1,5 @@
+# Files kept in the repo but never served to visitors by Cloudflare Workers.
+README.md
+wrangler.jsonc
+.gitignore
+.assetsignore
