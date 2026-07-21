@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kossov.it/sitemap.xml
+Sitemap: https://k-it.ai/sitemap.xml

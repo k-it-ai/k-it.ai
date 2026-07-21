@@ -1,6 +1,6 @@
-# KOSSOV.IT — Sovereign AI website
+# k-it.ai — Sovereign AI website
 
-Static marketing site for **kossov.it**. Plain HTML/CSS/JS — no build step, no
+Static marketing site for **k-it.ai**. Plain HTML/CSS/JS — no build step, no
 dependencies, no server-side code. Bilingual (German default / English),
 deployed on Cloudflare Workers (Static Assets).
 
@@ -59,19 +59,19 @@ Deployed as a Cloudflare Worker using **Static Assets** (`wrangler.jsonc` →
 `assets.directory: "."`), connected to this repo via Workers Builds, so
 **pushing to `main` auto-deploys**. `_headers` and `_redirects` are applied by
 the runtime; `.assetsignore` keeps `README.md`, `wrangler.jsonc` and `.gitignore`
-out of the public site. The custom domain (kossov.it) is set in the Cloudflare
+out of the public site. The custom domain (k-it.ai) is set in the Cloudflare
 dashboard. Manual deploy: `npx wrangler deploy`.
 
 ## Notes
 
 - **Contact form → FormSubmit** (no account). The **first** submission emails
-  `hi@kossov.it` a one-time activation link; click it once and later submissions
+  `hi@k-it.ai` a one-time activation link; click it once and later submissions
   arrive in that inbox. The address is assembled at runtime (never in the page
   source); if the request fails the form falls back to a pre-filled email. For a
   fully EU-resident setup, swap FormSubmit for a Workers handler + an EU mailer
   (Brevo/Mailjet) and update the privacy policy.
 - **Email obfuscation:** the address never appears as text in the HTML/JS source
-  (assembled by JS from `data-` attributes; `hi(at)kossov.it` fallback if JS is
+  (assembled by JS from `data-` attributes; `hi(at)k-it.ai` fallback if JS is
   off).
 - **Fonts** (Inter, JetBrains Mono) are self-hosted under `assets/fonts/` — no
   request ever goes to Google.
