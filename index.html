@@ -41,6 +41,17 @@
   .cta-btn:hover,.cta-btn-lg:hover,.form-submit:hover{filter:brightness(.94);}
   .ghost-btn:hover{border-color:#2ba9d3!important;}
   .service-card:hover{border-color:rgba(43,169,211,.45)!important;}
+  /* Deployment tier cards */
+  .tier-card{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;}
+  .tier-card:hover{transform:translateY(-4px);border-color:rgba(43,169,211,.4)!important;}
+  .tier-card--rec{border-color:rgba(43,111,214,.55)!important;box-shadow:0 0 0 1px rgba(43,111,214,.30),0 22px 50px rgba(0,61,143,.30);}
+  .tier-card--rec:hover{transform:translateY(-6px);border-color:rgba(43,111,214,.85)!important;}
+  .tier-badge{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#bcd6ff;background:rgba(43,111,214,.18);border:1px solid rgba(43,111,214,.45);border-radius:999px;padding:3px 9px;display:inline-flex;align-items:center;gap:4px;}
+  .tier-price{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;}
+  .tier-price .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
+  .tier-price .lbl{color:#5b6470;letter-spacing:.04em;text-transform:uppercase;font-size:11px;}
+  .tier-price .val{color:#fff;}
+  .tier-price .val-hi{color:#2f7bd6;font-weight:700;font-size:15px;}
   .lang-flag.inactive:hover{opacity:1!important;}
   .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:#2ba9d3!important;}
   .footer-link:hover,.back-link:hover{color:#fff!important;}
@@ -195,15 +206,15 @@
               <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">BGE-M3</span>
               <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">Qwen3-VL Reranker 8B</span>
             </div>
-            <div data-i18n="console.selfLabel" style="margin:14px 0 8px;color:#9aa3ad;">Modelle · self-hosted <span style="color:#5cd2ee;">— Ihre Hardware</span></div>
+            <div data-i18n="console.selfLabel" style="margin:14px 0 8px;color:#9aa3ad;">Modelle · self-hosted <span style="color:#5cd2ee;">— 128 GB Workstation</span></div>
             <div style="display:flex;flex-wrap:wrap;gap:8px;">
-              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">Llama 4 Maverick</span>
-              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">Mistral Large 2</span>
-              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">Qwen3 235B</span>
+              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">gpt-oss-120B</span>
+              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">Qwen3-30B-A3B</span>
+              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">Llama 3.3 70B</span>
               <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">Gemma 3 27B</span>
-              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">DeepSeek-V4</span>
-              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">Kimi K3</span>
-              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">GLM 5.2</span>
+              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">Mistral Small 24B</span>
+              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">BGE-M3</span>
+              <span style="font-size:12px;background:rgba(43,169,211,.12);color:#5cd2ee;border:1px solid rgba(43,169,211,.3);border-radius:6px;padding:5px 10px;">bge-reranker-v2-m3</span>
             </div>
             <div data-i18n="console.propLabel" style="margin:14px 0 8px;color:#9aa3ad;">Modelle · Frontier <span style="color:#f08a8e;">— optional · EU-Region · CLOUD-Act-Restrisiko</span></div>
             <div style="display:flex;flex-wrap:wrap;gap:8px;">
@@ -380,47 +391,64 @@
       <div class="deployment-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;align-items:start;">
         <div style="display:flex;flex-direction:column;gap:12px;">
           <div style="display:flex;align-items:baseline;gap:10px;">
-            <span style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2f7bd6;">Tier 1</span>
-            <span data-i18n="deploy.t1.kind" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5b6470;">Souverän · Empfohlen</span>
+            <span style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2ba9d3;">Tier 1</span>
+            <span data-i18n="deploy.t1.kind" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5b6470;">Souveränitäts-Anker</span>
           </div>
-          <div style="background:#11171d;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
-            <div style="height:4px;background:#003D8F;"></div>
+          <div class="tier-card" style="background:#11171d;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+            <div style="height:4px;background:#2ba9d3;"></div>
             <div style="padding:26px;">
-              <span style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#5b6470;">IONOS · Deutschland (Frankfurt)</span>
-              <h3 data-i18n="deploy.t1.h" style="font-size:20px;font-weight:600;margin:10px 0 10px;color:#fff;">IONOS EU Sovereign Cloud</h3>
-              <p data-i18n="deploy.t1.p" style="font-size:15px;line-height:1.65;color:#9aa3ad;margin:0;">Gemanagt in der souveränen deutschen Cloud (IONOS) — deutscher Anbieter, deutsche Jurisdiktion, AVV, kein US-Mutterunternehmen und damit außerhalb der Reichweite des CLOUD Act. Offene Spitzenmodelle wie gpt-oss-120B; ein selbst-gehosteter EU-VPS koordiniert die Pipeline und ruft die IONOS-Engines auf — Ihr Speicher bleibt bei Ihnen. Souveränität ohne eigene Hardware, auf Wunsch single-tenant.</p>
+              <span data-i18n="deploy.t1.tag" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#5b6470;">Ihre Hardware</span>
+              <h3 data-i18n="deploy.t1.h" style="font-size:20px;font-weight:600;margin:10px 0 10px;color:#fff;">On-Premise</h3>
+              <p data-i18n="deploy.t1.p" style="font-size:15px;line-height:1.65;color:#9aa3ad;margin:0;">Die sicherste Option: Modelle laufen auf Ihrer eigenen Hardware — einer kompakten KI-Workstation mit 128 GB Unified Memory (AMD Ryzen AI Max+ 395) in Ihren Räumen. gpt-oss-120B antwortet lokal in Echtzeit; kein externer Verarbeiter im Datenpfad. Für Berufsgeheimnisträger nach §203 StGB — Kanzleien, Praxen, Steuerberater — sowie Verteidigung, öffentlichen Sektor und kritische Infrastruktur.</p>
+              <div class="tier-price">
+                <div class="row"><span class="lbl" data-i18n="deploy.price.once">Einmalig</span><span class="val">4.490 €</span></div>
+                <div class="row"><span class="lbl" data-i18n="deploy.price.month">Monatlich</span><span class="val">390 €</span></div>
+                <div class="row"><span class="lbl">API</span><span class="val" data-i18n="deploy.t1.api" style="color:#9aa3ad;">lokal · keine</span></div>
+              </div>
             </div>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px;">
-          <div style="display:flex;align-items:baseline;gap:10px;">
-            <span style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2ba9d3;">Tier 2</span>
-            <span data-i18n="deploy.t2.kind" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5b6470;">Souverän · Sicherste Option</span>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <span style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2f7bd6;">Tier 2</span>
+            <span data-i18n="deploy.t2.kind" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5b6470;">Empfohlene Mitte</span>
+            <span class="tier-badge">&#9733; <span data-i18n="deploy.badge.rec">Empfohlen</span></span>
           </div>
-          <div style="background:#11171d;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
-            <div style="height:4px;background:#2ba9d3;"></div>
+          <div class="tier-card tier-card--rec" style="background:#11171d;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+            <div style="height:4px;background:#003D8F;"></div>
             <div style="padding:26px;">
-              <span data-i18n="deploy.t2.tag" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#5b6470;">Ihre Hardware</span>
-              <h3 data-i18n="deploy.t2.h" style="font-size:20px;font-weight:600;margin:10px 0 10px;color:#fff;">On-Premise</h3>
-              <p data-i18n="deploy.t2.p" style="font-size:15px;line-height:1.65;color:#9aa3ad;margin:0;">Die sicherste Option: Die Modelle laufen auf Ihrer eigenen Hardware, innerhalb Ihrer eigenen Mauern — kein externer Verarbeiter im Datenpfad. Für Berufsgeheimnisträger nach §203 StGB (Kanzleien, Praxen, Steuerberater) sowie Verteidigung, öffentlichen Sektor und kritische Infrastruktur.</p>
+              <span style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#5b6470;">IONOS · Deutschland (Frankfurt)</span>
+              <h3 data-i18n="deploy.t2.h" style="font-size:20px;font-weight:600;margin:10px 0 10px;color:#fff;">IONOS EU Sovereign Cloud</h3>
+              <p data-i18n="deploy.t2.p" style="font-size:15px;line-height:1.65;color:#9aa3ad;margin:0;">Gemanagt in der souveränen deutschen Cloud (IONOS) — deutscher Anbieter, deutsche Jurisdiktion, AVV, kein US-Mutterunternehmen und damit außerhalb der Reichweite des CLOUD Act. Offene Spitzenmodelle wie gpt-oss-120B; ein selbst-gehosteter EU-VPS koordiniert die Pipeline und ruft die IONOS-Engines auf — Ihr Speicher bleibt bei Ihnen. Souveränität ohne eigene Hardware, auf Wunsch single-tenant.</p>
+              <div class="tier-price">
+                <div class="row"><span class="lbl" data-i18n="deploy.price.once">Einmalig</span><span class="val">495 €</span></div>
+                <div class="row"><span class="lbl" data-i18n="deploy.price.month">Monatlich</span><span class="val-hi">149 €</span></div>
+                <div class="row"><span class="lbl">API</span><span class="val" style="color:#9aa3ad;">BYOK</span></div>
+              </div>
             </div>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px;">
           <div style="display:flex;align-items:baseline;gap:10px;">
             <span style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#e0b15a;">Tier 3</span>
-            <span data-i18n="deploy.t3.kind" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5b6470;">Maximale Leistung</span>
+            <span data-i18n="deploy.t3.kind" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5b6470;">Leistungs-Premium</span>
           </div>
-          <div style="background:#11171d;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+          <div class="tier-card" style="background:#11171d;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
             <div style="height:4px;background:#e0b15a;"></div>
             <div style="padding:26px;">
               <span style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#5b6470;">Azure AI Foundry · Amazon Bedrock</span>
               <h3 data-i18n="deploy.t3.h" style="font-size:20px;font-weight:600;margin:10px 0 10px;color:#fff;">Managed Frontier (EU)</h3>
               <p data-i18n="deploy.t3.p" style="font-size:15px;line-height:1.65;color:#9aa3ad;margin:0;">Wenn Sie die absolute Spitzenleistung brauchen: proprietäre Frontier-Modelle — Claude Opus 4.8, GPT-5.6, Grok 4.3 — über Azure AI Foundry oder Amazon Bedrock, in EU-Regionen mit EU-Datengrenze und EU-Verträgen. Transparent: Microsoft und Amazon sind US-Muttergesellschaften; der CLOUD Act bleibt ein Restrisiko, das wir offen mit Ihnen abwägen.</p>
+              <div class="tier-price">
+                <div class="row"><span class="lbl" data-i18n="deploy.price.once">Einmalig</span><span class="val">695 €</span></div>
+                <div class="row"><span class="lbl" data-i18n="deploy.price.month">Monatlich</span><span class="val">249 €</span></div>
+                <div class="row"><span class="lbl">API</span><span class="val" style="color:#9aa3ad;">BYOK</span></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <p data-i18n="deploy.pricenote" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;color:#5b6470;margin:18px 0 0;">Alle Preise zzgl. USt. · Richtpreise — finales Festpreis-Angebot nach Umfang. BYOK = eigener API-Schlüssel (IONOS bzw. Frontier-Anbieter).</p>
     </div>
   </section>
 
@@ -544,7 +572,7 @@
             <div><label data-i18n="form.company" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3ad;display:block;margin-bottom:7px;">Unternehmen</label><input type="text" placeholder="Acme GmbH" name="company" class="form-input" style="width:100%;background:#11171d;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:11px 13px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;"></div>
           </div>
           <div style="margin-top:14px;"><label data-i18n="form.email" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3ad;display:block;margin-bottom:7px;">Geschäftliche E-Mail</label><input type="email" placeholder="erika@acme.de" name="email" data-i18n-ph="form.email.ph" class="form-input" required style="width:100%;background:#11171d;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:11px 13px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;"></div>
-          <div style="margin-top:14px;"><label data-i18n="form.deployment" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3ad;display:block;margin-bottom:7px;">Bevorzugtes Deployment</label><select name="deployment" class="form-select" style="width:100%;background:#11171d;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:11px 13px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;appearance:none;-webkit-appearance:none;"><option data-i18n="form.opt1">IONOS EU Sovereign Cloud</option><option data-i18n="form.opt2">On-Premise (§203 / sicherste Option)</option><option data-i18n="form.opt3">Managed Frontier (EU) — max. Leistung</option><option data-i18n="form.opt4">Noch unsicher — beraten Sie mich</option></select></div>
+          <div style="margin-top:14px;"><label data-i18n="form.deployment" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3ad;display:block;margin-bottom:7px;">Bevorzugtes Deployment</label><select name="deployment" class="form-select" style="width:100%;background:#11171d;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:11px 13px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;appearance:none;-webkit-appearance:none;"><option data-i18n="form.opt1">IONOS EU Sovereign Cloud (empfohlen)</option><option data-i18n="form.opt2">On-Premise (§203 / sicherste Option)</option><option data-i18n="form.opt3">Managed Frontier (EU) — max. Leistung</option><option data-i18n="form.opt4">Noch unsicher — beraten Sie mich</option></select></div>
           <div style="margin-top:14px;"><label data-i18n="form.run" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9aa3ad;display:block;margin-bottom:7px;">Was möchten Sie betreiben?</label><textarea rows="3" placeholder="z. B. privates RAG über unsere internen Dokumente, dazu ein Chat-Assistent für den Support …" data-i18n-ph="form.run.ph" name="message" class="form-textarea" style="width:100%;background:#11171d;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:11px 13px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;resize:vertical;"></textarea></div>
           <button type="submit" class="form-submit" data-i18n="form.submit" style="margin-top:18px;width:100%;background:#2ba9d3;color:#fff;border:none;padding:14px;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;font-family:'Inter',sans-serif;transition:filter .15s;">Deployment-Plan anfordern</button>
           <div data-i18n="form.privacy" style="margin-top:14px;font-size:11px;line-height:1.5;color:#5b6470;text-align:center;">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben gemäß unserer <a href="legal-notice.html#datenschutz" style="color:#9aa3ad;text-decoration:underline;">Datenschutzerklärung</a> zu.</div>
@@ -739,16 +767,21 @@
     "deploy.eyebrow": "04 — Deployment",
     "deploy.h2": "Three ways to draw the boundary",
     "deploy.regions": "Regions: <span style=\"color:#fff;\">Germany · Frankfurt (IONOS / on-prem)</span> — more on request",
-    "deploy.t1.kind": "Sovereign · Recommended",
-    "deploy.t1.h": "IONOS EU Sovereign Cloud",
-    "deploy.t1.p": "Managed in the sovereign German cloud (IONOS) — German provider, German jurisdiction, a DPA in place, no US parent and therefore outside CLOUD Act reach. Open frontier models such as gpt-oss-120B; a self-hosted EU VPS orchestrates the pipeline and calls the IONOS engines — your store stays with you. Sovereignty without owning hardware, single-tenant on request.",
-    "deploy.t2.kind": "Sovereign · Safest option",
-    "deploy.t2.tag": "Your hardware",
-    "deploy.t2.h": "On-premise",
-    "deploy.t2.p": "The safest option: models run on your own hardware, inside your own walls — no external processor in the data path. For professionals bound by secrecy under §203 StGB (law, medical and tax practices) as well as defence, public sector and critical infrastructure.",
-    "deploy.t3.kind": "Maximum capability",
+    "deploy.t1.kind": "Sovereignty anchor",
+    "deploy.t1.tag": "Your hardware",
+    "deploy.t1.h": "On-premise",
+    "deploy.t1.p": "The safest option: models run on your own hardware — a compact AI workstation with 128 GB unified memory (AMD Ryzen AI Max+ 395) inside your own walls. gpt-oss-120B answers locally in real time; no external processor in the data path. For professionals bound by secrecy under §203 StGB — law, medical and tax practices — as well as defence, public sector and critical infrastructure.",
+    "deploy.t1.api": "local · none",
+    "deploy.t2.kind": "Recommended",
+    "deploy.t2.h": "IONOS EU Sovereign Cloud",
+    "deploy.t2.p": "Managed in the sovereign German cloud (IONOS) — German provider, German jurisdiction, a DPA in place, no US parent and therefore outside CLOUD Act reach. Open frontier models such as gpt-oss-120B; a self-hosted EU VPS orchestrates the pipeline and calls the IONOS engines — your store stays with you. Sovereignty without owning hardware, single-tenant on request.",
+    "deploy.t3.kind": "Performance premium",
     "deploy.t3.h": "Managed Frontier (EU)",
     "deploy.t3.p": "When you need the absolute best: proprietary frontier models — Claude Opus 4.8, GPT-5.6, Grok 4.3 — via Azure AI Foundry or Amazon Bedrock, in EU regions with an EU data boundary and EU contracts. Transparent: Microsoft and Amazon are US parent companies; the CLOUD Act remains a residual risk we weigh openly with you.",
+    "deploy.price.once": "One-time",
+    "deploy.price.month": "Monthly",
+    "deploy.badge.rec": "Recommended",
+    "deploy.pricenote": "All prices excl. VAT · indicative — final fixed-price quote on scope. BYOK = bring your own API key (IONOS or frontier provider).",
     "comp.eyebrow": "05 — Compliance &amp; trust",
     "comp.h2": "Built for jurisdictions that take data seriously",
     "comp.i1.h": "EU &amp; German jurisdiction",
@@ -802,7 +835,7 @@
     "form.email": "Work email",
     "form.email.ph": "jane@acme.de",
     "form.deployment": "Preferred deployment",
-    "form.opt1": "IONOS EU Sovereign Cloud",
+    "form.opt1": "IONOS EU Sovereign Cloud (recommended)",
     "form.opt2": "On-premise (§203 / safest)",
     "form.opt3": "Managed Frontier (EU) — max capability",
     "form.opt4": "Not sure yet — advise me",
