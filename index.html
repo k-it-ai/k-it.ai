@@ -53,12 +53,15 @@
   .tier-card--rec:hover{transform:translateY(-6px);border-color:rgba(43,111,214,.75)!important;box-shadow:0 22px 48px rgba(0,61,143,.22);}
   .tier-card--premium{border-color:rgba(224,177,90,.38)!important;box-shadow:0 16px 40px rgba(224,177,90,.10);}
   .tier-card--premium:hover{transform:translateY(-6px);border-color:rgba(224,177,90,.6)!important;box-shadow:0 22px 48px rgba(224,177,90,.16);}
+  .tier-card--anchor{border-color:rgba(43,169,211,.35)!important;box-shadow:0 16px 40px rgba(43,169,211,.09);}
+  .tier-card--anchor:hover{transform:translateY(-6px);border-color:rgba(43,169,211,.6)!important;box-shadow:0 22px 48px rgba(43,169,211,.15);}
   .tier-badge{font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#bcd6ff;background:rgba(43,111,214,.18);border:1px solid rgba(43,111,214,.45);border-radius:999px;padding:3px 9px;display:inline-flex;align-items:center;gap:4px;}
   .tier-price{margin-top:auto;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;}
   .tier-price .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
   .tier-price .lbl{color:#5b6470;letter-spacing:.04em;text-transform:uppercase;font-size:11px;}
   .tier-price .val{color:#fff;}
   .tier-price .val-hi{color:#2f7bd6;font-weight:700;font-size:15px;}
+  .tier-price .val-lg{color:#fff;font-weight:700;font-size:15px;}
   .lang-flag.inactive:hover{opacity:1!important;}
   .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:#2ba9d3!important;}
   .form-select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232ba9d3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 14px center;}
@@ -162,7 +165,7 @@
     <div class="hero-grid" style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:start;">
       <div>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
-          <span style="color:#da2128;font-size:13px;">&#9679;</span>
+          <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#da2128;"></span>
           <span data-i18n="hero.eyebrow" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#2ba9d3;">Privater KI-Assistent · EU-souverän</span>
         </div>
         <h1 class="hero-h1" data-i18n="hero.h1" style="font-size:54px;font-weight:700;letter-spacing:-.03em;line-height:1.04;margin:0;color:#fff;">Ihre KI. Ihre Daten.<br><span style="color:#2ba9d3;">Ihre Jurisdiktion.</span></h1>
@@ -244,10 +247,10 @@
   <!-- ============ BADGES ============ -->
   <div style="border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);background:#0e141a;">
     <div class="badges-strip" style="max-width:1180px;margin:0 auto;padding:18px 56px;display:flex;justify-content:space-between;gap:24px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;flex-wrap:wrap;">
-      <span style="display:flex;align-items:center;gap:9px;color:#cfd6dd;"><span style="color:#2ba9d3;">&#9679;</span> <span data-i18n="badge.residency">EU-Datenresidenz</span></span>
-      <span style="display:flex;align-items:center;gap:9px;color:#cfd6dd;"><span style="color:#2ba9d3;">&#9679;</span> <span data-i18n="badge.gdpr">DSGVO-konform gestaltet</span></span>
-      <span style="display:flex;align-items:center;gap:9px;color:#cfd6dd;"><span style="color:#2ba9d3;">&#9679;</span> <span data-i18n="badge.aiact">Bereit für den EU AI Act</span></span>
-      <span style="display:flex;align-items:center;gap:9px;color:#cfd6dd;"><span style="color:#2ba9d3;">&#9679;</span> <span data-i18n="badge.lockin">Kein US-Cloud-Lock-in</span></span>
+      <span style="display:flex;align-items:center;gap:9px;color:#cfd6dd;"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#2ba9d3;flex:none;"></span> <span data-i18n="badge.residency">EU-Datenresidenz</span></span>
+      <span style="display:flex;align-items:center;gap:9px;color:#cfd6dd;"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#2ba9d3;flex:none;"></span> <span data-i18n="badge.gdpr">DSGVO-konform gestaltet</span></span>
+      <span style="display:flex;align-items:center;gap:9px;color:#cfd6dd;"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#2ba9d3;flex:none;"></span> <span data-i18n="badge.aiact">Bereit für den EU AI Act</span></span>
+      <span style="display:flex;align-items:center;gap:9px;color:#cfd6dd;"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#2ba9d3;flex:none;"></span> <span data-i18n="badge.lockin">Kein US-Cloud-Lock-in</span></span>
     </div>
   </div>
 
@@ -325,66 +328,44 @@
       <div data-i18n="how.eyebrow" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#2ba9d3;margin-bottom:16px;">03 — Wie Ihre Daten fließen</div>
       <h2 class="sec-h2" data-i18n="how.h2" style="font-size:38px;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:0;max-width:720px;color:#fff;">Jede Anfrage bleibt innerhalb der Grenze</h2>
       <p data-i18n="how.lead" style="font-size:17px;line-height:1.7;color:#cfd6dd;margin:22px 0 0;max-width:740px;">Keine Blackbox. Dies ist der tatsächliche Weg einer Anfrage — und der Weg, den sie niemals nehmen darf.</p>
-      <div class="flow-card" style="margin-top:44px;background:#0e141a;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:36px;">
-        <div class="flow-diagram" style="display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;">
-          <div style="background:#11171d;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px;text-align:center;">
-            <div data-i18n="how.yourside" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9aa3ad;margin-bottom:12px;">Ihre Seite</div>
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2ba9d3" stroke-width="1.5" style="margin-bottom:10px;"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4" stroke-linecap="round"/></svg>
-            <div data-i18n="how.users" style="font-size:15px;font-weight:600;color:#fff;">Ihre Nutzer &amp; Apps</div>
-            <div data-i18n="how.tls" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;color:#5b6470;margin-top:6px;">&rarr; TLS 1.3 mit gegenseitiger Auth</div>
+      <div class="flow-card" style="margin:44px auto 0;max-width:760px;background:#0e141a;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:36px;">
+        <div style="max-width:640px;margin:0 auto;">
+
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:44px;height:44px;flex:none;border-radius:12px;background:rgba(43,169,211,.12);border:1px solid rgba(43,169,211,.3);display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ba9d3" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z" stroke-linejoin="round"/></svg></div>
+            <div style="padding-top:3px;"><div data-i18n="how.q" style="font-size:15px;font-weight:600;color:#fff;">Sie fragen</div><div data-i18n="how.q.ex" style="font-size:14px;color:#cfd6dd;margin-top:4px;font-style:italic;">„Was ist der Stand bei Müller GmbH?“</div></div>
           </div>
 
-          <div class="flow-side-connector" style="display:none;align-items:center;justify-content:center;padding:6px 0;">
-            <div style="position:relative;width:2px;height:30px;background:rgba(43,169,211,.25);overflow:visible;">
-              <span style="position:absolute;left:-2px;width:6px;height:6px;border-radius:999px;background:#2ba9d3;box-shadow:0 0 8px #2ba9d3;animation:flowdotv 2.6s linear infinite;"></span>
+          <div style="width:2px;height:22px;margin:8px 0 8px 21px;background:rgba(43,169,211,.25);position:relative;"><span style="position:absolute;left:-2px;top:0;width:6px;height:6px;border-radius:50%;background:#2ba9d3;box-shadow:0 0 8px #2ba9d3;animation:flowdotv 2.6s linear infinite;"></span></div>
+
+          <div style="position:relative;border:1.5px dashed rgba(43,169,211,.55);border-radius:16px;padding:26px 20px 22px;background:rgba(43,169,211,.045);display:flex;flex-direction:column;gap:18px;">
+            <div data-i18n="how.boundary" style="position:absolute;top:-11px;left:18px;background:#0e141a;padding:0 10px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#2ba9d3;">Souveräne Grenze · DE (Frankfurt / Nürnberg)</div>
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:40px;height:40px;flex:none;border-radius:10px;background:rgba(43,169,211,.1);border:1px solid rgba(43,169,211,.28);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ba9d3" stroke-width="1.6"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4-4" stroke-linecap="round"/></svg></div>
+              <div><div data-i18n="how.s1" style="font-size:14px;font-weight:600;color:#fff;">Finden</div><div data-i18n="how.s1.sub" style="font-size:13px;color:#9aa3ad;margin-top:2px;">in Ihren Dokumenten &amp; E-Mails</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:40px;height:40px;flex:none;border-radius:10px;background:rgba(43,169,211,.1);border:1px solid rgba(43,169,211,.28);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ba9d3" stroke-width="1.6"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke-linecap="round"/></svg></div>
+              <div><div data-i18n="how.s2" style="font-size:14px;font-weight:600;color:#fff;">Formulieren</div><div data-i18n="how.s2.sub" style="font-size:13px;color:#9aa3ad;margin-top:2px;">KI-Modell · IONOS / On-Prem</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:40px;height:40px;flex:none;border-radius:10px;background:rgba(43,169,211,.1);border:1px solid rgba(43,169,211,.28);display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ba9d3" stroke-width="1.6"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" stroke-linejoin="round"/><path d="M14 3v6h6" stroke-linejoin="round"/><path d="M9 14.5l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div><div data-i18n="how.s3" style="font-size:14px;font-weight:600;color:#fff;">Belegen</div><div data-i18n="how.s3.sub" style="font-size:13px;color:#9aa3ad;margin-top:2px;">jede Aussage mit Quelle — sonst „nicht sicher“</div></div>
             </div>
           </div>
 
-          <div style="position:relative;border:1.5px dashed rgba(43,169,211,.6);border-radius:16px;padding:24px 22px 22px;background:rgba(43,169,211,.04);">
-            <div data-i18n="how.boundary" style="position:absolute;top:-11px;left:20px;background:#0e141a;padding:0 10px;font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#2ba9d3;">Germany · Frankfurt — souveräne Grenze</div>
-            <div class="flow-inner" style="display:flex;align-items:stretch;gap:0;">
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:6px;">
-                <div style="width:42px;height:42px;border-radius:10px;background:rgba(43,169,211,.12);border:1px solid rgba(43,169,211,.3);display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ba9d3" stroke-width="1.5"><path d="M4 12h16M4 12l5-5M4 12l5 5" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="6" width="6" height="12" rx="1"/></svg></div>
-                <div data-i18n="how.gw" style="font-size:13px;font-weight:600;color:#fff;">Zugang</div>
-                <div data-i18n="how.gw.sub" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#5b6470;">Auth · Rate-Limit</div>
-              </div>
-              <div class="flow-connector" style="display:flex;align-items:center;padding-top:18px;"><div style="position:relative;width:46px;height:2px;background:rgba(43,169,211,.25);"><span style="position:absolute;top:-2px;width:6px;height:6px;border-radius:999px;background:#2ba9d3;box-shadow:0 0 8px #2ba9d3;animation:flowdot 2.6s linear infinite;"></span></div></div>
-              <div class="flow-connector-v" style="display:none;align-items:center;justify-content:center;padding:4px 0;"><div style="position:relative;width:2px;height:26px;background:rgba(43,169,211,.25);"><span style="position:absolute;left:-2px;width:6px;height:6px;border-radius:999px;background:#2ba9d3;box-shadow:0 0 8px #2ba9d3;animation:flowdotv 2.6s linear infinite;"></span></div></div>
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:6px;">
-                <div style="width:42px;height:42px;border-radius:10px;background:rgba(43,169,211,.12);border:1px solid rgba(43,169,211,.3);display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ba9d3" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" stroke-linecap="round"/></svg></div>
-                <div data-i18n="how.inf" style="font-size:13px;font-weight:600;color:#fff;">KI-Modell</div>
-                <div data-i18n="how.inf.sub" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#5b6470;">IONOS / on-prem</div>
-              </div>
-              <div class="flow-connector" style="display:flex;align-items:center;padding-top:18px;"><div style="position:relative;width:46px;height:2px;background:rgba(43,169,211,.25);"><span style="position:absolute;top:-2px;width:6px;height:6px;border-radius:999px;background:#2ba9d3;box-shadow:0 0 8px #2ba9d3;animation:flowdot 2.6s linear infinite;animation-delay:.9s;"></span></div></div>
-              <div class="flow-connector-v" style="display:none;align-items:center;justify-content:center;padding:4px 0;"><div style="position:relative;width:2px;height:26px;background:rgba(43,169,211,.25);"><span style="position:absolute;left:-2px;width:6px;height:6px;border-radius:999px;background:#2ba9d3;box-shadow:0 0 8px #2ba9d3;animation:flowdotv 2.6s linear infinite;animation-delay:.9s;"></span></div></div>
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:6px;">
-                <div style="width:42px;height:42px;border-radius:10px;background:rgba(43,169,211,.12);border:1px solid rgba(43,169,211,.3);display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ba9d3" stroke-width="1.5"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
-                <div data-i18n="how.rag" style="font-size:13px;font-weight:600;color:#fff;">Ihr Wissen</div>
-                <div data-i18n="how.rag.sub" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#5b6470;">Dokumente &amp; E-Mails</div>
-              </div>
-              <div class="flow-connector" style="display:flex;align-items:center;padding-top:18px;"><div style="position:relative;width:46px;height:2px;background:rgba(43,169,211,.25);"><span style="position:absolute;top:-2px;width:6px;height:6px;border-radius:999px;background:#2ba9d3;box-shadow:0 0 8px #2ba9d3;animation:flowdot 2.6s linear infinite;animation-delay:1.7s;"></span></div></div>
-              <div class="flow-connector-v" style="display:none;align-items:center;justify-content:center;padding:4px 0;"><div style="position:relative;width:2px;height:26px;background:rgba(43,169,211,.25);"><span style="position:absolute;left:-2px;width:6px;height:6px;border-radius:999px;background:#2ba9d3;box-shadow:0 0 8px #2ba9d3;animation:flowdotv 2.6s linear infinite;animation-delay:1.7s;"></span></div></div>
-              <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:6px;">
-                <div style="width:42px;height:42px;border-radius:10px;background:rgba(43,169,211,.12);border:1px solid rgba(43,169,211,.3);display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2ba9d3" stroke-width="1.5"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" stroke-linecap="round"/></svg></div>
-                <div data-i18n="how.logs" style="font-size:13px;font-weight:600;color:#fff;">Logs &amp; Schlüssel</div>
-                <div data-i18n="how.logs.sub" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:10px;color:#5b6470;">nur in der Region</div>
-              </div>
-            </div>
+          <div style="width:2px;height:22px;margin:8px 0 8px 21px;background:rgba(31,138,91,.3);position:relative;"><span style="position:absolute;left:-2px;top:0;width:6px;height:6px;border-radius:50%;background:#5fbf92;box-shadow:0 0 8px #5fbf92;animation:flowdotv 2.6s linear infinite;animation-delay:.6s;"></span></div>
+
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 16px;border:1px solid rgba(31,138,91,.3);border-radius:12px;background:rgba(31,138,91,.06);">
+            <div style="width:44px;height:44px;flex:none;border-radius:12px;background:rgba(31,138,91,.14);border:1px solid rgba(31,138,91,.4);display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5fbf92" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div style="padding-top:3px;"><div data-i18n="how.ans" style="font-size:15px;font-weight:600;color:#fff;">Antwort mit Quellen</div><div data-i18n="how.ans.sub" style="font-size:13px;color:#9aa3ad;margin-top:3px;">verlässt nie Ihre Grenze</div></div>
           </div>
-        </div>
-        <div class="flow-diagram egress-diagram" style="display:grid;grid-template-columns:200px 1fr;gap:28px;margin-top:22px;">
-          <div class="egress-spacer"></div>
-          <div style="display:flex;align-items:center;gap:16px;padding:14px 18px;border:1px solid rgba(218,33,40,.3);border-radius:12px;background:rgba(218,33,40,.06);">
-            <div style="position:relative;width:64px;height:24px;flex:none;display:flex;align-items:center;">
-              <span style="position:absolute;left:2px;top:11px;width:34px;border-top:2px dashed rgba(218,33,40,.4);"></span>
-              <span style="position:absolute;top:7px;left:2px;width:8px;height:8px;border-radius:999px;background:#da2128;box-shadow:0 0 8px rgba(218,33,40,.7);animation:repel 2.4s cubic-bezier(.5,0,.3,1) infinite;"></span>
-              <span style="position:absolute;right:0;top:1px;width:20px;height:20px;border-radius:999px;border:2px solid #da2128;display:flex;align-items:center;justify-content:center;animation:wallflash 2.4s ease-in-out infinite;"><span style="width:11px;height:2px;background:#da2128;border-radius:1px;"></span></span>
-            </div>
-            <div>
-              <div data-i18n="how.egress.h" style="font-size:14px;font-weight:600;color:#fff;">Abfluss in eine US-Cloud — blockiert</div>
-              <div data-i18n="how.egress.sub" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;color:#9aa3ad;margin-top:3px;">keine Replikation, keine Telemetrie, kein Modell-Provider-Callback verlässt die EU-Grenze</div>
-            </div>
+
+          <div style="display:flex;gap:14px;align-items:center;margin-top:20px;padding:12px 16px;border:1px solid rgba(218,33,40,.28);border-radius:12px;background:rgba(218,33,40,.05);">
+            <span style="width:22px;height:22px;flex:none;border-radius:50%;border:2px solid #da2128;display:flex;align-items:center;justify-content:center;animation:wallflash 2.4s ease-in-out infinite;"><span style="width:11px;height:2px;background:#da2128;border-radius:1px;"></span></span>
+            <div><div data-i18n="how.egress.h" style="font-size:14px;font-weight:600;color:#fff;">Kein Abfluss in US-Clouds — blockiert</div><div data-i18n="how.egress.sub" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;color:#9aa3ad;margin-top:3px;">keine Replikation, keine Telemetrie, kein Modell-Provider-Callback verlässt die EU-Grenze</div></div>
           </div>
+
         </div>
       </div>
     </div>
@@ -395,14 +376,14 @@
     <div style="max-width:1180px;margin:0 auto;">
       <div data-i18n="deploy.eyebrow" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#2ba9d3;margin-bottom:16px;">04 — Deployment</div>
       <h2 class="sec-h2" data-i18n="deploy.h2" style="font-size:38px;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:0;color:#fff;">Drei Wege, die Grenze zu ziehen</h2>
-      <p data-i18n="deploy.regions" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;color:#9aa3ad;margin:16px 0 0;">Regionen: <span style="color:#fff;">Deutschland · Frankfurt (IONOS / on-prem)</span> — weitere auf Anfrage</p>
+      <p data-i18n="deploy.regions" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;color:#9aa3ad;margin:16px 0 0;">Regionen: <span style="color:#fff;">Deutschland · Frankfurt &amp; Nürnberg (IONOS · netcup · on-prem)</span> · Frontier: EU-Regionen (Azure/AWS, u.&nbsp;a. Frankfurt · Irland · Paris) — weitere auf Anfrage</p>
       <div class="deployment-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;align-items:stretch;">
         <div style="display:flex;flex-direction:column;gap:12px;">
           <div style="display:flex;align-items:baseline;gap:10px;">
             <span style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2ba9d3;">Tier 1</span>
             <span data-i18n="deploy.t1.kind" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5b6470;">Souveränitäts-Anker</span>
           </div>
-          <div class="tier-card" style="background:#11171d;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+          <div class="tier-card tier-card--anchor" style="background:#11171d;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
             <div style="height:4px;background:#2ba9d3;"></div>
             <div style="padding:26px;">
               <span data-i18n="deploy.t1.tag" style="font-family:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#5b6470;">Ihre Hardware</span>
@@ -410,7 +391,7 @@
               <p data-i18n="deploy.t1.p" style="font-size:15px;line-height:1.65;color:#9aa3ad;margin:0;">Die sicherste Option: Modelle laufen auf Ihrer eigenen Hardware — einer kompakten KI-Workstation mit 128 GB Unified Memory (AMD Ryzen AI Max+ 395) in Ihren Räumen. gpt-oss-120B antwortet lokal in Echtzeit; kein externer Verarbeiter im Datenpfad. Für Berufsgeheimnisträger nach §203 StGB — Kanzleien, Praxen, Steuerberater — sowie Verteidigung, öffentlichen Sektor und kritische Infrastruktur.</p>
               <div class="tier-price">
                 <div class="row"><span class="lbl" data-i18n="deploy.price.once">Einmalig</span><span class="val">4.495 €</span></div>
-                <div class="row"><span class="lbl" data-i18n="deploy.price.month">Monatlich</span><span class="val">399 €</span></div>
+                <div class="row"><span class="lbl" data-i18n="deploy.price.month">Monatlich</span><span class="val-lg">399 €</span></div>
                 <div class="row"><span class="lbl">API</span><span class="val" data-i18n="deploy.t1.api" style="color:#9aa3ad;">lokal · keine</span></div>
               </div>
             </div>
@@ -449,7 +430,7 @@
               <p data-i18n="deploy.t3.p" style="font-size:15px;line-height:1.65;color:#9aa3ad;margin:0;">Wenn Sie die absolute Spitzenleistung brauchen: proprietäre Frontier-Modelle — Claude Opus 4.8, GPT-5.6, Grok 4.3 — über Azure AI Foundry oder Amazon Bedrock, in EU-Regionen mit EU-Datengrenze und EU-Verträgen. Transparent: Microsoft und Amazon sind US-Muttergesellschaften; der CLOUD Act bleibt ein Restrisiko, das wir offen mit Ihnen abwägen.</p>
               <div class="tier-price">
                 <div class="row"><span class="lbl" data-i18n="deploy.price.once">Einmalig</span><span class="val">695 €</span></div>
-                <div class="row"><span class="lbl" data-i18n="deploy.price.month">Monatlich</span><span class="val">249 €</span></div>
+                <div class="row"><span class="lbl" data-i18n="deploy.price.month">Monatlich</span><span class="val-lg">249 €</span></div>
                 <div class="row"><span class="lbl">API</span><span class="val" style="color:#9aa3ad;">BYOK</span></div>
               </div>
             </div>
@@ -469,15 +450,15 @@
       </div>
       <div style="display:flex;flex-direction:column;">
         <div style="display:flex;gap:18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08);">
-          <span style="color:#da2128;font-size:16px;line-height:1.6;">&#9679;</span>
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#da2128;flex:none;margin-top:7px;"></span>
           <div><h3 data-i18n="comp.i1.h" style="font-size:18px;font-weight:600;margin:0 0 6px;color:#fff;">EU- &amp; deutsche Jurisdiktion</h3><p data-i18n="comp.i1.p" style="font-size:15px;line-height:1.6;color:#9aa3ad;margin:0;">Verträge, Infrastruktur und Betrieb nach europäischem Recht. In der souveränen deutschen Cloud (IONOS) oder auf Ihrer eigenen Hardware liegt kein US-Mutterunternehmen im Datenpfad — außerhalb der Reichweite des CLOUD Act.</p></div>
         </div>
         <div style="display:flex;gap:18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08);">
-          <span style="color:#da2128;font-size:16px;line-height:1.6;">&#9679;</span>
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#da2128;flex:none;margin-top:7px;"></span>
           <div><h3 data-i18n="comp.i2.h" style="font-size:18px;font-weight:600;margin:0 0 6px;color:#fff;">DSGVO ab Werk</h3><p data-i18n="comp.i2.p" style="font-size:15px;line-height:1.6;color:#9aa3ad;margin:0;">Auftragsverarbeitungsverträge, dokumentierte Datenflüsse und EU-ansässige Speicherung ab dem ersten Tag.</p></div>
         </div>
         <div style="display:flex;gap:18px;padding:22px 0;">
-          <span style="color:#da2128;font-size:16px;line-height:1.6;">&#9679;</span>
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#da2128;flex:none;margin-top:7px;"></span>
           <div><h3 data-i18n="comp.i3.h" style="font-size:18px;font-weight:600;margin:0 0 6px;color:#fff;">Bereit für den EU AI Act</h3><p data-i18n="comp.i3.p" style="font-size:15px;line-height:1.6;color:#9aa3ad;margin:0;">Risikoklassifizierung, Transparenz und Logging — ausgerichtet an den kommenden Pflichten des AI Act.</p></div>
         </div>
       </div>
@@ -758,23 +739,22 @@
     "how.eyebrow": "03 — How your data flows",
     "how.h2": "Every request stays inside the boundary",
     "how.lead": "No black box. This is the actual path a request takes — and the path it is never allowed to take.",
-    "how.yourside": "Your side",
-    "how.users": "Your users &amp; apps",
-    "how.tls": "&rarr; TLS 1.3 mutual auth",
-    "how.boundary": "Germany · Frankfurt — sovereign boundary",
-    "how.gw": "Access",
-    "how.gw.sub": "auth · rate-limit",
-    "how.inf": "AI model",
-    "how.inf.sub": "IONOS / on-prem",
-    "how.rag": "Your knowledge",
-    "how.rag.sub": "documents &amp; email",
-    "how.logs": "Logs &amp; keys",
-    "how.logs.sub": "in-region only",
-    "how.egress.h": "Data leaving for a US cloud — blocked",
+    "how.q": "You ask",
+    "how.q.ex": "“What's the status with Müller GmbH?”",
+    "how.boundary": "Sovereign boundary · DE (Frankfurt / Nuremberg)",
+    "how.s1": "Find",
+    "how.s1.sub": "across your documents &amp; email",
+    "how.s2": "Draft",
+    "how.s2.sub": "AI model · IONOS / On-Prem",
+    "how.s3": "Cite &amp; check",
+    "how.s3.sub": "every claim sourced — or “not confident”",
+    "how.ans": "Answer, with sources",
+    "how.ans.sub": "never leaves your boundary",
+    "how.egress.h": "No data leaving for US clouds — blocked",
     "how.egress.sub": "no replication, no telemetry, no model-provider callback leaves the EU boundary",
     "deploy.eyebrow": "04 — Deployment",
     "deploy.h2": "Three ways to draw the boundary",
-    "deploy.regions": "Regions: <span style=\"color:#fff;\">Germany · Frankfurt (IONOS / on-prem)</span> — more on request",
+    "deploy.regions": "Regions: <span style=\"color:#fff;\">Germany · Frankfurt &amp; Nuremberg (IONOS · netcup · on-prem)</span> · Frontier: EU regions (Azure/AWS, incl. Frankfurt · Ireland · Paris) — more on request",
     "deploy.t1.kind": "Sovereignty anchor",
     "deploy.t1.tag": "Your hardware",
     "deploy.t1.h": "On-premise",
